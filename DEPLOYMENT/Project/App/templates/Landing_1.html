@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+        background-image: url("/static/images/P2.jpg");
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center;
+    }
+
+    .main {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .center {
+        height: 80%;
+        width: 70%;
+        position: absolute;
+        left: 15%; /* Adjusted to center */
+        top: 50%;
+        transform: translate(0%,-50%);
+        z-index: 1; /* Added */
+    }
+
+    .imgContainer {
+        overflow: hidden;
+        position: absolute;
+        width: 0%;
+        height: 100%;
+    }
+
+    img {
+        height: 100%;
+    }
+
+    .heading {
+        overflow: hidden;
+        height: 118px;
+        width: 520px;
+        z-index: 2;
+        position: absolute;
+        top: 20%;
+        left: -80px;
+    }
+
+    .heading h1 {
+        position: absolute;
+        font-size: 9vw;
+        top: 100px;
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+    }
+
+    .lines {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        position: absolute;
+        left: -200px;
+    }
+
+    .line {
+        height: 120px;
+        width: 2px;
+        background-color: #d3d3d3;
+    }
+
+    .line.active {
+        background-color: #000; 
+    }
+
+    .textContainer {
+        position: absolute;
+        width: 480px;
+        height: 150px; /* Adjusted */
+        overflow: hidden;
+        padding: 10px;
+        top: 48%;
+        left: -80px;
+        z-index: 3;
+    }
+
+    #one {
+        color: black;
+        border-radius: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;
+        margin-top: 10px;
+        z-index: 4; /* Added */
+        position: relative; /* Added */
+    }
+
+    .text {
+        position: absolute;
+        top: -100%;
+        color: #000;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .imgContainer::before {
+        position: absolute;
+        content:" ";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: rgba(255,255,255,0.3);
+    }
+
+    .icons {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-size: 20px;
+        gap: 20px;
+        right: 6%;
+        bottom: 20%;
+    }
+
+    .Hamburger {
+        position: absolute;
+        right: 6%;
+        top: 10%;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 4px;
+        height: 20px;
+        z-index: 4;
+    }
+
+    .hamburger-line {
+        width: 80%;
+        height: 2px;
+        background: #000;
+    }
+
+    .hamburger-line:nth-child(3) {
+        width: 60%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="main">
+   
+    <div class="center" id="">
+        <!-- Slider indicator -->
+        <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        
+        <!-- sliderHeading -->
+        <div class="heading">
+             <h1>Stock </h1>
+             <h1>Market</h1>
+             <h1>Price</h1>
+        </div>
+        <!-- slidertext -->
+        <div class="textContainer">
+            <div class="text">
+              The stock market prediction is inherently uncertain and influenced by numerous unpredictable factors, making precise forecasts highly challenging.
+            </div>
+           
+            <div class="text">
+              TCS (Tata Consultancy Services) is an Indian multinational information technology services and consulting company, one of the largest companies in the Tata Group.
+            </div>
+            <div class="text">
+              Accenture plc is a US multinational professional services company headquartered in Dublin for tax reasons, specializing in information technology (IT) services and consulting. A Fortune Global 500 company, it reported revenues of $64.1 billion in 2023.
+            </div>
+            <div class="text">
+              <a href="{% url 'Login_2' %}" id="one">EXPLORE</a>
+            </div>
+        </div>
+
+        <!-- Slider Images -->
+        <div class="imgContainer">
+            <img src="/static/images/Q1.webp" alt="">
+        </div>
+        <div class="imgContainer">
+            <img src="/static/images/ST2.jpg" alt="">
+        </div>
+        <div class="imgContainer">
+            <img src="/static/images/Q2.jpeg" alt="">
+        </div>
+       
+    </div>
+   
+    <div class="icons">
+        <a href="{% url 'Login_2' %}" id="one" style="color: rgb(235, 105, 31);" >EXPLORE</a>
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script>
+  let tl = gsap.timeline({
+    repeat: -1,
+});
+
+const slides = gsap.utils.toArray('.imgContainer');
+const lines = gsap.utils.toArray('.line');
+
+tl
+.to(slides, {
+    ease: Expo.easeInOut,
+    width: "100%",
+    duration: 2,
+    stagger: 2,
+},"flag")
+.to(".heading h1", {
+    ease: Expo.easeInOut,
+    stagger: 2,
+    duration: 2,
+    top: 0
+},"flag")
+.to(".text", {
+    ease: Expo.easeInOut,
+    stagger: 2,
+    duration: 2,
+    top: "0%"
+},"flag")
+.to(".text", {
+    delay: 2,
+    ease: Expo.easeInOut,
+    stagger: 2,
+    duration: 1,
+    opacity: 0
+},"flag")
+.to(".heading h1", {
+    delay: 2,
+    ease: Expo.easeInOut,
+    stagger: 2,
+    duration: 2,
+    top: "-200%"
+},"flag")
+
+tl.eventCallback("onUpdate", () => {
+    const progress = tl.progress();
+    lines.forEach((dot, index) => {
+        dot.classList.toggle('active', index * 0.25 <= progress && progress < (index + 1) * 0.25);
+    });
+});
+</script>
+
+</body>
+</html>

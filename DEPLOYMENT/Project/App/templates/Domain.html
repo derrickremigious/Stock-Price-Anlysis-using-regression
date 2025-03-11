@@ -1,0 +1,260 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{% block title %}Tooplate's Little Fashion - FAQs Page{% endblock %}</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/slick.css' %}"/>
+        <link href="{% static 'css/tooplate-little-fashion.css' %}" rel="stylesheet">
+
+        <!--
+        Tooplate 2127 Little Fashion
+        https://www.tooplate.com/view/2127-little-fashion
+        -->
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="{% url 'Home_4' %}">
+                        <strong><span>Stock</span> </strong>
+                    </a>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'Home_4' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'Domain' %}">Domain Result</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'Tcs_Report' %}">Tcs Report</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'Accenture_Report' %}">Accenture Report</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'Deploy_9' %}">TCS Model</a>
+                                <a  href="{% url 'show_tcs_predictions' %}" class="bi bi-server">Tcs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'Deploy_8' %}">Accenture Model</a>
+                                <a href="{% url 'show_accenture_predictions' %}" class="bi bi-server">Acc</a>
+                            </li> 
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="{% url 'logout' %}" class="bi bi-box-arrow-right">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <header class="site-header section-padding d-flex justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12">
+                            <h1>
+                                <span class="d-block text-primary">Data science and  </span>
+                                <span class="d-block text-dark">Artificial Intelligence</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="faq section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <h2>General Info.</h2>
+
+                            <div class="accordion" id="accordionGeneral">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne" aria-expanded="true" aria-controls="accordionGeneralOne">
+                                            What is this Machine Learning?
+                                        </button>
+                                    </h2>
+                                    <div id="accordionGeneralOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
+                                        <div class="accordion-body">
+                                            <p class="large-paragraph"><strong>Machine learning (ML)</strong> is a branch of AI and computer science that focuses on the using data and algorithms to enable AI to imitate the way that humans ...</p>
+                                            <p class="large-paragraph">Machine learning is a subfield of artificial intelligence, which is broadly defined as the capability of a machine to imitate intelligent human behavior.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo" aria-expanded="false" aria-controls="accordionGeneralTwo">
+                                            What is Algorithm ?
+                                        </button>
+                                    </h2>
+                                    <div id="accordionGeneralTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
+                                        <div class="accordion-body">
+                                            <p class="large-paragraph"><a href="https://www.tooplate.com/free-templates" target="_blank">An algorithm</a>  is a set of commands that must be followed for a computer to perform calculations or other problem-solving operations.</p>
+                                        </div>
+                                        <div class="card-view-4 col-md-4">
+                                            <h1 class="chapter"></h1>
+                                            <h3 style="color: bisque;"><b>BEST_ALGORITHM</b></h3>
+                                            <ul>
+                                    
+                                              <li>DECISION TREE REGRESSOR ALGORITHM</li>
+                                              <li>Accuracy Score =  99.94 %</li>
+                                              <li>ARDRegression ALGORITHM</li>
+                                              <li>Accuracy Score =  99.90 %</li>
+                                            </ul>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralThree" aria-expanded="false" aria-controls="accordionGeneralThree">
+                                            We are using the Django framework
+                                        </button>
+                                    </h2>
+                                    <div id="accordionGeneralThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
+                                        <div class="accordion-body">
+                                            <p class="large-paragraph">Django can be (and has been) used to build almost any type of website — from content management systems and wikis, through to social networks and news sites.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="mt-5">About <span>Project</span></h2>
+
+                            <div class="accordion" id="accordionProduct">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionProductOne" aria-expanded="true" aria-controls="accordionProductOne">
+                                            Project Overview
+                                        </button>
+                                    </h2>
+                                    <div id="accordionProductOne" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionProduct">
+                                        <div class="accordion-body">
+                                            <p class="large-paragraph"><strong>Predicting stock prices: </strong> The objective of this project is to predict the stock prices of Tata Consultancy Services (TCS) using historical stock price data and machine learning algorithms. The project will involve data collection, preprocessing, exploratory data analysis, model building, and evaluation.</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionProductTwo" aria-expanded="false" aria-controls="accordionProductTwo">
+                                            We are using the Technologies?
+                                        </button>
+                                    </h2>
+                                    <div id="accordionProductTwo" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionProduct">
+                                        <!-- <div class="accordion-body">
+                                            <p class="large-paragraph">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                                        </div> -->
+                                        <div class="accordion-body">
+                                            <p class="large-paragraph"><strong>Programming Languages: </strong> Python</p>
+                                            <p class="large-paragraph"><strong>Domain: </strong> Data science and Artificial Intelligence</p>
+                                            <p class="large-paragraph"><strong>Technologies: </strong> Machine Learning</p>
+                                            <p class="large-paragraph"><strong>Data Preprocessing and EDA: </strong> Pandas, NumPy, Matplotlib, Seaborn</p>
+                                            <p class="large-paragraph"><strong>Fornt End: </strong> Html, Css, Js</p>
+                                            <p class="large-paragraph"><strong>Data base: </strong> Sqlite</p>
+                                            <p class="large-paragraph"><strong>Frame Work: </strong> Django</p>
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="{% url 'Landing_1' %}">TCS</a> ACCENTURE</h4>
+                        <!-- <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p> -->
+                        <br>
+                        <p class="copyright-text">Web Site <a href="https://www.tcs.com/" target="_blank">TCS</a></p>
+                        <p class="copyright-text">Web Site <a href="https://www.accenture.com/us-en" target="_blank">ACCENTURE</a></p>
+                    </div>
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="{% url 'Tcs_Report' %}" class="footer-menu-link">Tcs Report</a></li>
+
+                            <li class="footer-menu-item"><a href="{% url 'Accenture_Report' %}" class="footer-menu-link">Accenture Report</a></li>
+
+                            <li class="footer-menu-item"><a href="{% url 'Deploy_9' %}" class="footer-menu-link">Tcs Model</a></li>
+
+                            <li class="footer-menu-item"><a href="{% url 'Deploy_8' %}" class="footer-menu-link">Accenture Model</a></li>
+
+                            <li class="footer-menu-item"><a href="{% url 'Domain' %}" class="footer-menu-link">Domain Result </a></li>
+
+                           
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+
+                        <ul class="social-icon">
+
+                            <li><a href="https://www.youtube.com/results?search_query=machine+learning" class="social-icon-link bi-youtube"></a></li>
+
+                            <li><a href="https://hands-on.cloud/facebook-prophet-a-simple-algorithm-for-time-series-data/" class="social-icon-link bi-facebook"></a></li>
+
+                            <li><a href="https://towardsdatascience.com/ml-approaches-for-time-series-4d44722e48fe" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="https://machinelearningmastery.com/time-series-forecasting-supervised-learning/" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/Headroom.js' %}"></script>
+        <script src="{% static 'js/jQuery.headroom.js' %}"></script>
+        <script src="{% static 'js/slick.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+    </body>
+</html>
